@@ -24,6 +24,10 @@ func main(){
     //拷贝 numbers 的内容到 numbers1
     copy(numbers1,numbers)
     printSlice(numbers1)
+
+    //验证cap计算规则 减掉下限之前的元素
+    numbers2 := numbers1[1:6]
+    printSlice(numbers2)
 }
 
 func printSlice(x []int){
