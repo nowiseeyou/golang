@@ -57,4 +57,42 @@ map是一种集合，所以我们可以像迭代数组和切片那样来迭代�
 
 ## delete()函数 ##
 
-delete（）函数用于删除集合的元素，
+delete（）函数用于删除集合的元素，参数为map 和其对应的key ,实例如下：
+
+    package main
+	import "fmt"
+	
+	func main(){
+		countryCapitalMap := map[string]string{"France":"Paris","Italy":"Rome","Japan":"Tokyo","India":"New delhi"}
+
+		fmt.Println("原始地图")
+		
+		//打印地图
+		for country := range countryCapitalMap {
+			fmt.Println(country,"首都是 ",countryCapitalMap [country])
+		}
+
+		//删除元素 
+		delete(countryCapitalMap,"France")
+		fmt.Println("法国条目无法删除")
+
+		fmt.Println("删除元素后地图")
+
+		//打印地图
+		for country ：= range countryCapitalMap {
+			fmt.Println(country,"首都是 "countryCapitalMap [country])
+		}
+	}
+
+输出结果
+
+    原始地图
+	France 首都   Paris
+	Italy 首都   Rome
+	Japan 首都   Tokyo
+	India 首都   New delhi
+	法国条目被删除
+	删除后的地图
+	Italy 首都  Rome
+	Japan 首都  Tokyo
+	India 首都  New delhi
