@@ -8,7 +8,7 @@ func main() {
 	fmt.Println("Hello")
 	gradeRst := ""
 	gradeRst = grade(100)
-	fmt.Println(gradeRst)
+	fmt.Printf("%s \n",gradeRst)
 }
 
 //switch
