@@ -6,9 +6,9 @@ import (
 
 func main() {
 	fmt.Println("Hello")
-	gradeRst := ""
-	gradeRst = grade(100)
-	fmt.Printf("%s \n",gradeRst)
+	grade(101)
+	//fmt.Printf(grade(101))
+
 }
 
 //switch
