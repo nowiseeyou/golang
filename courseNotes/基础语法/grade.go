@@ -18,6 +18,7 @@ func grade(score int) string {
 	g := ""
 	switch {
 		case  score < 0 || score >100:
+			//panic(fmt.Sprintf("Wrong score %d",score))
 			g = "金额错误，超出0-100的范围：" + string(score)
 		case  score < 60:
 			g = "D"
