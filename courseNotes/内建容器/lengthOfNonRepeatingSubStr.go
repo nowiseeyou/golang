@@ -17,10 +17,11 @@ func lengthOfNonRepeatingSubStr(s string) int{
 
 		lastOccurred[ch] = i
 	}
-
 	return maxLength
+	//fmt.Println(lastOccurred)
 }
 
 func main(){
-	fmt.Println(lengthOfNonRepeatingSubStr("aaaabcddabcafeaaa"))
+	lengthOfNonRepeatingSubStr("aaaabcddabcafeaaa")
+	fmt.Println()
 }
