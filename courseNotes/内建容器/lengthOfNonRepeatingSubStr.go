@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func lengthOfNonRepeatingSubStr(s string){
+func lengthOfNonRepeatingSubStr(s string) int{
 	lastOccurred := make(map[byte]int)
 	start := 0
 	maxLength := 0
@@ -17,8 +17,8 @@ func lengthOfNonRepeatingSubStr(s string){
 
 		lastOccurred[ch] = i
 	}
-
-	fmt.Println(lastOccurred)
+	return maxLength
+	//fmt.Println(lastOccurred)
 }
 
 func main(){
