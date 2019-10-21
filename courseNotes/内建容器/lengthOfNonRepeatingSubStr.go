@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 func lengthOfNonRepeatingSubStr(s string) int{
 	lastOccurred := make(map[rune]int)
@@ -25,4 +28,27 @@ func main(){
 	fmt.Println(len("881DB6CCE417CBD0D30D0D29EC3559E2"))
 	fmt.Println(lengthOfNonRepeatingSubStr("aaaabcddabcafeaaa"))
 	fmt.Println(lengthOfNonRepeatingSubStr("一二一三三儿一二1R一一"))
+
+	type profile struct {
+		name string
+		age int
+		gender int
+		hobby string
+	}
+
+	theShy := profile{
+		name:"姜承碌",
+		age:19,
+		gender:1,
+		hobby:"发育",
+	}
+	json,err := json.Marshal(theShy)
+
+	fmt.Println(theShy)
+	fmt.Println(theShy.name)
+	fmt.Println(theShy.age)
+	fmt.Println(theShy.gender)
+	fmt.Println(theShy.hobby)
+
+	fmt.Println(string(json),err)
 }
