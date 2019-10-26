@@ -33,9 +33,9 @@ func (node *treeNode) traverse(){
 	if node == nil {
 		return
 	}
-	node.left.print()
+	node.left.traverse()
 	node.print()
-	node.right.print()
+	node.right.traverse()
 }
 
 func main(){
@@ -47,12 +47,22 @@ func main(){
 	}
 
 	root.left = &treeNode{}
-	root.left.right = createNode(2)
 	root.right = &treeNode{5,nil,nil}
-	root.right.left = new(treeNode)
 
-	fmt.Println(root)
+	root.right.left = new(treeNode)
+	root.left.right = createNode(2)
+	root.right.left.setValue(4)
+	//root.traverse()
+
+
+	root.print()
+	fmt.Println(root.left)
+	fmt.Println(root.right)
+	fmt.Println(root.left.right)
+	fmt.Println(root.right.left)
+
 	//中序遍历
+	fmt.Println("中序遍历")
 	root.traverse()
 	return
 
