@@ -25,11 +25,14 @@ func lengthOfNonRepeatingSubStr(s string) int{
 }
 
 func main(){
+	//lengthOfNonRepeatingSubStr("aacbaa")
+	//return
+	fmt.Println([]byte("aahello"))
+	fmt.Println([]rune("233"))
 	fmt.Println(len("881DB6CCE417CBD0D30D0D29EC3559E2"))
 	fmt.Println(lengthOfNonRepeatingSubStr("aaaabcddabcafeaaa"))
 	fmt.Println(lengthOfNonRepeatingSubStr("一二一三三儿一二1R一一"))
-	fmt.Println([]byte("hello"))
-	fmt.Println([]rune("233"))
+
 	return
 	type profile struct {
 		name string
