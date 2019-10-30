@@ -2,5 +2,5 @@ package main
 
 
 func main() {
-	queue.Queue{1}
+	//queue.Queue{1}
 }
