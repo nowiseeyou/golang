@@ -25,7 +25,7 @@ func lengthOfNonRepeatingSubStr(s string) int{
 }
 
 func main(){
-	//lengthOfNonRepeatingSubStr("aacbaa")
+	//lengthOfNonRepeatingSubStr("aaacbaa")
 	//return
 	fmt.Println([]byte("aahello"))
 	fmt.Println([]rune("233"))
