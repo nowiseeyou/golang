@@ -26,3 +26,7 @@ func (r Retriever) Get(url string) string{
 
 	return string(result)
 }
+
+func main(){
+	println("test")
+}
