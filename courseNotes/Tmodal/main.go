@@ -10,11 +10,11 @@ type Retriever interface {
 }
 
 func download(retriever Retriever) string {
-	return retriever.Get("https://baidu.com")
+	return retriever.Get("http://www.baidu.com")
 }
 
 func main()  {
 	var r  Retriever
-	r = really.Retriever{}
+	r =really.Retriever{}
 	fmt.Println(download(r))
 }
