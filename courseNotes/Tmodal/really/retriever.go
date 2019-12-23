@@ -18,10 +18,11 @@ func (r Retriever) Get(url string) string {
 	}
 
 	result,err := httputil.DumpResponse(resp,true)
-
 	resp.Body.Close()
-	{
+
+	if err != nil {
 		panic(err)
 	}
+
 	return string(result)
 }
