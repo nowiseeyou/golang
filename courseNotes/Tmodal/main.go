@@ -1,7 +1,6 @@
 package main
 
 import (
-	"./really"
 	"fmt"
 )
 
@@ -15,6 +14,5 @@ func download(retriever Retriever) string {
 
 func main()  {
 	var r  Retriever
-	r =really.Retriever{}
 	fmt.Println(download(r))
 }
