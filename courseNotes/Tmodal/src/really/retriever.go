@@ -26,3 +26,15 @@ func (r Retriever) Get(url string) string {
 
 	return string(result)
 }
+
+type Poster struct {
+}
+
+func (p Poster)Post(url string) string{
+	return url
+}
+
+type RetrieverPoster struct {
+	Retriever
+	Poster
+}
