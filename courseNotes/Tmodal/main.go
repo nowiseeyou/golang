@@ -24,9 +24,10 @@ type Poster interface {
 }
 
 type RetrieverPoster interface {
-	Retriever
 	Poster
+	Retriever
 }
+
 func session(s RetrieverPoster) {
 	s.Post(url)
 	s.Get(url)
