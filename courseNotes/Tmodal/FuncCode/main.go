@@ -1,0 +1,7 @@
+package FuncCode
+
+
+
+func main() {
+
+}
