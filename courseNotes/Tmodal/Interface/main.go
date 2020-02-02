@@ -35,7 +35,7 @@ func session(s RetrieverPoster) {
 
 func main()  {
 	var r  Retriever
-	var p Poster
+	var p  Poster
 	var rp RetrieverPoster
 
 	r = really.Retriever{}
