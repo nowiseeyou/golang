@@ -43,7 +43,34 @@ func printFileContents(reader io.Reader){
 	}
 }
 
+func (node *Node) Traverse() {
+	node.TraverseFunc(func(n *Node)) {
+		n.Print()
+	}
+
+	fmt.Println()
+}
+
+func(node *Node) TraverseFunc(f func(*Node)){
+	if node == nil {
+		return
+	}
+
+	node.left.TraverseFunc(f)
+	f(node)
+	node.right.TraverseFunc(f)
+}
+
+
+
 func main() {
+	root.Traverse()
+	nodeCount := 0
+	root.TraverseFunc(func(node *tree.Node)){
+		nodeCount++
+	}
+	fmt.Println("Node count:",nodeCount)
+	return
 	f := fibonacci()
 	printFileContents(f)
 
