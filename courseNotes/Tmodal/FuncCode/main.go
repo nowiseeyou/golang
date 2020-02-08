@@ -43,15 +43,15 @@ func printFileContents(reader io.Reader){
 	}
 }
 
-func (node *Node) Traverse() {
-	node.TraverseFunc(func(n *Node)) {
-		n.Print()
-	}
+func (node *treeNode) Traverse() {
+	node.TraverseFunc(func(n *treeNode) {
+		n.print()
+	})
 
 	fmt.Println()
 }
 
-func(node *Node) TraverseFunc(f func(*Node)){
+func(node *treeNode) TraverseFunc(f func(*treeNode)){
 	if node == nil {
 		return
 	}
@@ -61,14 +61,49 @@ func(node *Node) TraverseFunc(f func(*Node)){
 	node.right.TraverseFunc(f)
 }
 
+type treeNode struct {
+	value int
+	left,right *treeNode
+}
 
+//工厂函数
+func createNode(value int) *treeNode {
+	return &treeNode{value:value}
+}
+
+//值接收者
+func (node *treeNode) print(){
+	fmt.Println(node.value," ")
+}
+
+//指针接收者
+func (node *treeNode) setValue(value int){
+	//nil 可以调用指针
+	if node == nil {
+		fmt.Println("setting value to nil node ignored" )
+		return
+	}
+	node.value = value
+}
 
 func main() {
+	root := treeNode{
+		value: 3,
+		left:  nil,
+		right: nil,
+	}
+
+	root.left = &treeNode{}
+	root.right = &treeNode{5,nil,nil}
+
+	root.right.left = new(treeNode)
+	root.left.right = createNode(2)
+	root.right.left.setValue(4)
 	root.Traverse()
 	nodeCount := 0
-	root.TraverseFunc(func(node *tree.Node)){
+	root.TraverseFunc(func(node *treeNode){
 		nodeCount++
-	}
+	})
 	fmt.Println("Node count:",nodeCount)
 	return
 	f := fibonacci()
