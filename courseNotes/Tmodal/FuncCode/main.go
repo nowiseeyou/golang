@@ -15,7 +15,7 @@ func adder() func(int) int {
 	}
 }
 
-func fibonacci() intGen {
+func Fibonacci() intGen {
 	a,b := 0,1
 	return func() int {
 		a,b = b, a+b
@@ -106,7 +106,7 @@ func main() {
 	})
 	fmt.Println("Node count:",nodeCount)
 	return
-	f := fibonacci()
+	f := Fibonacci()
 	printFileContents(f)
 
 	return
