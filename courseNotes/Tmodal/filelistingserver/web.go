@@ -1,6 +1,7 @@
 package main
 
 import (
+	"filelisting"
 	"net/http"
 	"os"
 )
@@ -26,7 +27,7 @@ func errWrapper(handler appHandler) func(http.ResponseWriter,*http.Request){
 }
 
 func main()  {
-	http.HandleFunc("/list/", errWrapper(filedlisting.HandleFileList(\)))
+	http.HandleFunc("/list/", errWrapper(filelisting.HandleFileList))
 
 	err := http.ListenAndServe(":8888",nil)
 	if err != nil {
