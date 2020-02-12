@@ -1,4 +1,4 @@
-package filedlisting
+package filelisting
 
 import (
 	"io/ioutil"
