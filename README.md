@@ -24,6 +24,7 @@ Go是从2007年末由Robert Griesemer, Rob Pike, Ken Thompson主持开发，后�
 
 #### 选修 ####
 
+- lua
 - 五笔
 - 英语
 - 日语
