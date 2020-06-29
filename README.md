@@ -21,6 +21,7 @@ Go是从2007年末由Robert Griesemer, Rob Pike, Ken Thompson主持开发，后�
 - Linux 高性能服务器编程
 - 数据库
 - 数据结构
+- Swoole Docs (https://www.swoole.co.uk/docs/)
 
 #### 选修 ####
 
