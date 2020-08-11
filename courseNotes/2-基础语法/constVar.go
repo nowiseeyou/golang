@@ -11,6 +11,6 @@ const (
 	pb
 )
 
-func main()  {
-	fmt.Println(b,kb,mb,gb,tb,pb)
+func main() {
+	fmt.Println(b, kb, mb, gb, tb, pb)
 }
