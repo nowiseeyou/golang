@@ -6,15 +6,15 @@ map是一种集合，所以我们可以像迭代数组和切片那样来迭代�
 
 ## 定义map ##
 
-可以使用内建函数make 也可以使用map关键字来定义map。
+可以使用内建函数 make 也可以使用 map 关键字来定义 map:
 
     //声明变量，默认 map 是 nil
 	var map_variable map[key_data_type]value_data_type
 
 	//使用 make 函数
-	map_variable := make(make[key_data_type]value_data_type)
+	map_variable := make(map[key_data_type]value_data_type)
 
-如果不初始化map，那么就会创建一个nil map。nil map 不能用来存放简直对。
+**注意：** 如果不初始化map，那么就会创建一个nil map。nil map 不能用来存放键值对。
 
 例：
 
