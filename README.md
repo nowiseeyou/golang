@@ -9,7 +9,7 @@ Go是从2007年末由Robert Griesemer, Rob Pike, Ken Thompson主持开发，后�
 
     https://learnku.com/go/t/32464?order_by=vote_count&  #包的引用
 	
-	http://docscn.studygolang.com/doc/code.html
+	http://docscn.studygolang.com/doc/code.html # 官方文档（中文
 
 	https://zhuanlan.zhihu.com/p/190812851   # MakeFile
 	
