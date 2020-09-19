@@ -1,0 +1,3 @@
+## goSrc ##
+
+	golang resource
