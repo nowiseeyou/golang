@@ -1,9 +1,10 @@
 package main
 
 import (
-	"filelisting"
 	"net/http"
 	"os"
+	
+	"filelisting"
 )
 
 type appHandler func(writer http.ResponseWriter, request *http.Request) error
