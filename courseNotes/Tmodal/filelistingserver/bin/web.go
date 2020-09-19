@@ -1,9 +1,10 @@
 package main
 
 import (
-	"filelisting"
 	"net/http"
 	"os"
+	
+	"filelisting"
 )
 
 type appHandler func(writer http.ResponseWriter, request *http.Request) error
@@ -29,7 +30,7 @@ func errWrapper(handler appHandler) func(http.ResponseWriter, *http.Request) {
 func main() {
 	http.HandleFunc("/list/", errWrapper(filelisting.HandleFileList))
 	
-	err := http.ListenAndServe(":8888", nil)
+	err := http.ListenAndServe(":777", nil)
 	if err != nil {
 		panic(err)
 	}
