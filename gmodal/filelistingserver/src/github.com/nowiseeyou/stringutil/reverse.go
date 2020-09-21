@@ -1,9 +1,5 @@
 package stringutil
 
-import (
-	"testing"
-)
-
 func Reverse(s string) string {
 	r := []rune(s)
 	for i,j := 0,len(r) -1; i< len(r)/2; i,j = i+1, j-1 {
@@ -12,20 +8,3 @@ func Reverse(s string) string {
 	return string(r)
 }
 
-func TestReverse(t *testing.T) {
-	cases :=  []struct{
-		in, want string
-	} {
-		{"hello world", "dlrow olleh"},
-		{"hello 世界", "界世 olleH"},
-		{"", ""},
-	}
-
-	for _,c := range cases  {
-		got := Reverse(c.in)
-		if got != c.want {
-			t.Errorf("Reverse(%q) == %q, want %q", c.in, got, c.want)
-		}
-	}
-
-}
