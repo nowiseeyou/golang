@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"os"
 )
-
+// if err
 func errTest(src string) {
-	if _,err := os.Open(src); err != nil {
+	if _,err := os.Open(src); err == nil {
 		panic(err)
 	}
 }
 
+//  字符串反序输出
 func reverse (s string ) string {
 	runes := []rune(s)
 	for i,j := 0,len(runes)-1; i < len(runes) / 2 ; i,j = i+1,j-1  {
@@ -20,6 +21,7 @@ func reverse (s string ) string {
 	return string(runes)
 }
 
+// switch grade
 func  grade(score float32)  string {
 	switch  {
 	case score > 50,score >= 100:
@@ -32,6 +34,28 @@ func  grade(score float32)  string {
 		return "A"
 	}
 	return "N"
+}
+/**
+Compare 按字典顺序比较两个字节切片并返回一个整数
+若 a == b 则结果为 ： 0 ； 若 a < b  则结果 ： -1 ； 若 a > b  则结果 ： 1
+ */
+func Compare(a,b []byte)  int{
+	for i := 0 ; i < len(a) && i <len(b); i++ {
+		switch  {
+			case a[i] > b[i]:
+				return 1
+			case a[i] < b[i]:
+				return -1
+		}
+	}
+	
+	switch  {
+	case len(a) > len(b):
+		return 1
+	case len(a) < len(b):
+		return -1
+	}
+	return 0
 }
 
 func main() {
