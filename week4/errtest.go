@@ -61,8 +61,8 @@ func Compare(a,b []byte)  int{
 func main() {
 	grade1 := grade(88)
 	grade2 := grade(101)
-	// src := "./index.html"
-	// errTest(src)
+	src := "./index.html"
+	errTest(src)
 	fmt.Printf("grade: %s \n", grade1)
 	fmt.Printf("grade2: %s \n", grade2)
 	
