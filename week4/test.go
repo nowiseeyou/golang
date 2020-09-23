@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"reflect"
 	"unicode"
 )
@@ -10,7 +11,7 @@ func functionOfSomeType( v interface{}) interface{}{
 	return reflect.TypeOf( v )
 }
 
-func nextInt(r []rune , i int) (int,int) {
+func nextInt(r []rune , i int) (value, nexPos int) {
 	for ; i < len(r) && !unicode.IsDigit(r[i]); i++ {
 	
 	}
@@ -19,7 +20,18 @@ func nextInt(r []rune , i int) (int,int) {
 		x = x * 10  +  int(r[i]) - 0
 	}
 	
-	return x,i
+	return
+}
+
+func ReadFull(r io.Reader, buf []byte) (n int, err error) {
+	for len(buf) > 0 && err == nil {
+		var nr int
+		nr, err = r.Read(buf)
+		n += nr
+		buf = buf[nr:]
+
+		}
+	return
 }
 
 func main() {
@@ -30,7 +42,8 @@ func main() {
 		fmt.Println(i)
 	}
 	
-	return 
+	
+	return
 	// 判断接口变量类型
 	var  t interface{}
 	t = functionOfSomeType(t)
