@@ -10,7 +10,7 @@ func functionOfSomeType( v interface{}) interface{}{
 	return reflect.TypeOf( v )
 }
 
-func newInt(r []rune , i int) (int,int) {
+func nextInt(r []rune , i int) (int,int) {
 	for ; i < len(r) && !unicode.IsDigit(r[i]); i++ {
 	
 	}
@@ -23,6 +23,14 @@ func newInt(r []rune , i int) (int,int) {
 }
 
 func main() {
+	r := []rune("23kill")
+	for i := 0; i < len(r); i++ {
+		x, i := nextInt(r, i)
+		fmt.Println(x)
+		fmt.Println(i)
+	}
+	
+	return 
 	// 判断接口变量类型
 	var  t interface{}
 	t = functionOfSomeType(t)
