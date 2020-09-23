@@ -3,10 +3,23 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"unicode"
 )
 
 func functionOfSomeType( v interface{}) interface{}{
 	return reflect.TypeOf( v )
+}
+
+func newInt(r []rune , i int) (int,int) {
+	for ; i < len(r) && !unicode.IsDigit(r[i]); i++ {
+	
+	}
+	x := 0
+	for ; i < len(r) && !unicode.IsDigit(r[i]); i++ {
+		x = x * 10  +  int(r[i]) - 0
+	}
+	
+	return x,i
 }
 
 func main() {
