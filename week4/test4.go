@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"go/ast"
 	"sync"
 )
 
@@ -45,7 +44,11 @@ func main(){
 	// 创建数组 切片
 	a := [...]string  {Enone: "no error", Eio: "Eio", Einval: "invalid argument"}
 	s := []string  {Enone: "no error", Eio: "Eio", Einval: "invalid argument"}
-	m := [...]string  {Enone: "no error", Eio: "Eio", Einval: "invalid argument"}
+	m := map[int]string  {Enone: "no error", Eio: "Eio", Einval: "invalid argument"}
+	
+	fmt.Print(a)
+	fmt.Print(s)
+	fmt.Print(m)
 }
 
 
