@@ -54,7 +54,6 @@ func main(){
 	pixels := make([]uint8, Xsize * Ysize) // 拥有类型 []uint8, 尽管图片是 [][]uint8
 	
 	// 遍历行， 从剩余像素切片的前面切出每行来
-	
 	for i := range picture{
 		picture[i], pixels = pixels[:Xsize], pixels[Xsize:]
 	}
