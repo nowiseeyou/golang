@@ -14,13 +14,9 @@ var timeZone = map[string]int {
 	"PST" : -8 * 60 * 60,
 }
 
-
-
 // 多重赋值
 var seconds int
 var ok bool
-
-
 
 func offset(tz string) int{
 	if seconds, ok := timeZone[tz];ok {
@@ -44,6 +40,8 @@ func main()  {
 		fmt.Println(person," 正在开会")
 	}
 	
-	offset := offset("Tom")
+	delete(timeZone,"PST")
+	
+	offset := offset("PRC")
 	fmt.Println(offset)
 }
