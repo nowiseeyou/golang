@@ -14,4 +14,12 @@ func main(){
 	x2 =  append(x2,y2...) // 如果 没有 ... 它就会由于类型错误而无法编译，因为 y 不是int 类型的
 	
 	fmt.Println(x2)
+	
+	// 集合
+	// var country map[string]string
+	country := make(map[string]string)
+	country["China"] = "beijing"
+	country["France"] = "paris"
+	
+	fmt.Println(country)
 }
