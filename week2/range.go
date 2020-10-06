@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	//这是我们使用range去求一个slice的和。使用数组跟这个很类似
+	// 这是我们使用range去求一个slice的和。使用数组跟这个很类似
 	nums := []int{2, 3, 4}
 	sum := 0
 	for _, num := range nums {
@@ -12,7 +12,7 @@ func main() {
 
 	fmt.Println("sum:", sum)
 
-	//在数组上使用range 将传入 index 和 值两个变量，上面那个例子我们不需要使用该元素的序号，索引我们使用空白符"_"省略了，有时候我们确实需要知道他的索引。
+	// 在数组上使用range 将传入 index 和 值两个变量，上面那个例子我们不需要使用该元素的序号，索引我们使用空白符"_"省略了，有时候我们确实需要知道他的索引。
 
 	for i, num := range nums {
 		if num == 3 {
@@ -20,13 +20,13 @@ func main() {
 		}
 	}
 
-	//range 也可以用在map的键值对上。
+	// range 也可以用在map的键值对上。
 	kvs := map[string]string{"a": "apple", "b": "banana"}
 	for k, v := range kvs {
 		fmt.Printf("%s -> %s\n", k, v)
 	}
 
-	//range 也可以用来枚举Unicode字符串。第一个参数是字符串的索引，第二个是字符（Unicode的值）本身。
+	// range 也可以用来枚举Unicode字符串。第一个参数是字符串的索引，第二个是字符（Unicode的值）本身。
 	for i, c := range "go" {
 		fmt.Println(i, c)
 	}

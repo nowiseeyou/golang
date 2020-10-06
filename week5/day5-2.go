@@ -41,7 +41,7 @@ func (s Sequence) String() string {
 }
 
 func main(){
-	Se := Sequence{5,2,9,4,6,8,4}
+	Se := Sequence{5,2,9,4,8,5,7}
 	sortString := Se.String()
 	fmt.Println(sortString)
 }
