@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-var addr = flag.String("addr", ":1718", "www.webqr.net") // Q=17, R=18
+var addr = flag.String("addr", ":1718", "www.qrlink.com") // Q=17, R=18
 
 var template1 = template.Must(template.New("qr").Parse(templateStr))
 
