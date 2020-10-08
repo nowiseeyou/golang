@@ -9,7 +9,7 @@ import (
 
 var addr = flag.String("addr", ":1718", "www.qrlink.com") // Q=17, R=18
 
-var template1 = template.Must(template.New("qr").Parse(templateStr))
+var templ = template.Must(template.New("qr").Parse(templateStr))
 
 func main() {
 	flag.Parse()
@@ -21,7 +21,7 @@ func main() {
 }
 
 func QR(w http.ResponseWriter, req *http.Request) {
-	template1.Execute(w, req.FormValue("s"))
+	templ.Execute(w, req.FormValue("s"))
 }
 
 const templateStr = `
