@@ -9,7 +9,7 @@ Go是从2007年末由Robert Griesemer, Rob Pike, Ken Thompson主持开发，后�
 
 包的引用（https://learnku.com/go/t/32464?order_by=vote_count&
 	
-官方文档&中文（http://docscn.studygolang.com/doc/code.html
+官方文档&中文（https://go-zh.org/doc/code.html
 
 MakeFile（https://zhuanlan.zhihu.com/p/190812851
 	
@@ -25,7 +25,7 @@ MakeFile（https://zhuanlan.zhihu.com/p/190812851
 - Linux 高性能服务器编程
 - 数据库
 - 数据结构
-- Swoole Docs (https://www.swoole.co.uk/docs/)
+- Swoole Docs (https://www.swoole.co.uk/docs/) 
 
 #### 选修 ####
 
