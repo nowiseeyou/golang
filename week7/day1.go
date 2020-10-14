@@ -37,6 +37,12 @@ func selectionSort(arr []int ) []int {
 	return arr
 }
 
+// 插入排序
+func insertionSort(arr []int) []int {
+	
+	return arr
+}
+
 func main() {
 	arr := []int{24, 21, 6, 1, 15}
 	
