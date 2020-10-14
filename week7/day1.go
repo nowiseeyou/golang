@@ -41,7 +41,9 @@ func main() {
 	arr := []int{24, 21, 6, 1, 15}
 	
 	bubbleSortArr := bubbleSort(arr)
+	selectionSort := selectionSort(arr)
 	
 	fmt.Println(bubbleSortArr)
+	fmt.Println(selectionSort)
 	
 }
