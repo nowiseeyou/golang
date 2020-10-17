@@ -39,17 +39,27 @@ func selectionSort(arr []int ) []int {
 
 // 插入排序
 func insertionSort(arr []int) []int {
-	
+	for i := range arr  {
+		preIndex := i
+		current := arr[i]       // arr[1]
+		for preIndex > 0 && arr[preIndex-1] > current  {        // arr[0] > arr[1]
+			arr[preIndex] = arr[preIndex-1]         // arr[1] = arr[0]
+			preIndex--
+		}
+		arr[preIndex] = current     // arr[0] = arr[1]
+	}
 	return arr
 }
 
 func main() {
 	arr := []int{24, 21, 6, 1, 15}
 	
-	bubbleSortArr := bubbleSort(arr)
-	selectionSort := selectionSort(arr)
+	bubbleSortArr := bubbleSort(arr)        // 冒泡排序
+	selectionSort := selectionSort(arr)     // 快速排序
+	insertionSort := insertionSort(arr)     // 插入排序
 	
 	fmt.Println(bubbleSortArr)
 	fmt.Println(selectionSort)
+	fmt.Println(insertionSort)
 	
 }
