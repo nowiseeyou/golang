@@ -54,12 +54,14 @@ func insertionSort(arr []int) []int {
 func main() {
 	arr := []int{24, 21, 6, 1, 15}
 	
-	bubbleSortArr := bubbleSort(arr)        // 冒泡排序
-	selectionSort := selectionSort(arr)     // 快速排序
 	insertionSort := insertionSort(arr)     // 插入排序
-	
-	fmt.Println(bubbleSortArr)
-	fmt.Println(selectionSort)
 	fmt.Println(insertionSort)
+	
+	bubbleSortArr := bubbleSort(arr)        // 冒泡排序
+	fmt.Println(bubbleSortArr)
+	
+	selectionSort := selectionSort(arr)     // 快速排序
+	fmt.Println(selectionSort)
+	
 	
 }
